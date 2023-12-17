@@ -1479,7 +1479,7 @@ void inline Adafruit_SPITFT::writeFastVLine(int16_t x, int16_t y, int16_t h,
     @note   This is a new function, no graphics primitives besides rects
             and horizontal/vertical lines are written to best use this yet.
 */
-inline void Adafruit_SPITFT::writeFillRectPreclipped(int16_t x, int16_t y,
+void Adafruit_SPITFT::writeFillRectPreclipped(int16_t x, int16_t y,
   int16_t w, int16_t h, uint16_t color) {
     setAddrWindow(x, y, w, h);
     writeColor(color, (uint32_t)w * h);
